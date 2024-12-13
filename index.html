@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROCK PAPER SCISSORS</title>
-</head>
-<body>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROCK PAPER SCISSORS</title>
+    <style>
+      *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+      }
+
+      body {
+        height: 100vh;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      header{
+        padding:30px 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .game {
+        width: 100%;
+        max-width: 1200px;
+        margin:0 auto;
+      }
+
+      /* score section */
+      .score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .score p {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      /* game section */
+      .game p {
+        font-weight: bold;
+      }
+
+      .game .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .game .computer-area,
+      .game .user-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* computer */
+      .game .computer-area {
+        margin-bottom: 100px;
+      }
+
+      .game .computer-area .avatar {
+        margin: 10px auto;
+      }
+
+      .game .computer-area #action {
+        height: 180px;
+        width: 150px;
+        border: 1px solid #000;
+      }
+
+      /* user */
+      .game .user-area .avatar {
+        margin-top: 20px;
+      }
+
+      .user-area .choices img {
+        width: 100px;
+        height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>ROCK PAPER SCISSORS</h1>
+    </header>
+    <main>
+      <section class="container">
+        <section class="score">
+          <p id="computerScore">0</p>
+        </section>
+
+        <section class="game">
+          <section class="computer-area">
+            <p>Computer</p>
+            <img class="avatar" src="./img/computer.png" alt="avatar" />
+            <img id="action" src="./img/unknown.jpg" alt="" />
+          </section>
+
+          <section class="user-area">
+            <div class="choices">
+              <button id="rock">
+                <img src="./img/rock.webp" title="press R" alt="rock" />
+              </button>
+              <button id="paper">
+                <img src="./img/paper.webp" title="press P" alt="paper" />
+              </button>
+              <button id="scissors">
+                <img src="./img/scissors.webp" title="press S" alt="scissors" />
+              </button>
+            </div>
+            <img class="avatar" src="./img/player.jpg" alt="avatar" />
+            <p>Player</p>
+          </section>
+        </section>
+
+        <section class="score">
+          <p id="userScore">0</p>
+        </section>
+      </section>
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
 </html>
